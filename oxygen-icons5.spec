@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : oxygen-icons5
-Version  : 5.52.0
-Release  : 5
-URL      : https://download.kde.org/stable/frameworks/5.52/oxygen-icons5-5.52.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.52/oxygen-icons5-5.52.0.tar.xz
-Source99 : https://download.kde.org/stable/frameworks/5.52/oxygen-icons5-5.52.0.tar.xz.sig
+Version  : 5.53.0
+Release  : 6
+URL      : https://download.kde.org/stable/frameworks/5.53/oxygen-icons5-5.53.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.53/oxygen-icons5-5.53.0.tar.xz
+Source99 : https://download.kde.org/stable/frameworks/5.53/oxygen-icons5-5.53.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -42,22 +42,22 @@ license components for the oxygen-icons5 package.
 
 
 %prep
-%setup -q -n oxygen-icons5-5.52.0
+%setup -q -n oxygen-icons5-5.53.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541873901
+export SOURCE_DATE_EPOCH=1544482592
 mkdir -p clr-build
 pushd clr-build
 %cmake ..
-make  %{?_smp_mflags} VERBOSE=1
+make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1541873901
+export SOURCE_DATE_EPOCH=1544482592
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oxygen-icons5
 cp COPYING %{buildroot}/usr/share/package-licenses/oxygen-icons5/COPYING
