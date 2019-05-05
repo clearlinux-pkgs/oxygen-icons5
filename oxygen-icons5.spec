@@ -6,7 +6,7 @@
 #
 Name     : oxygen-icons5
 Version  : 5.57.0
-Release  : 13
+Release  : 14
 URL      : https://download.kde.org/stable/frameworks/5.57/oxygen-icons5-5.57.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.57/oxygen-icons5-5.57.0.tar.xz
 Source99 : https://download.kde.org/stable/frameworks/5.57/oxygen-icons5-5.57.0.tar.xz.sig
@@ -49,7 +49,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1557043951
+export SOURCE_DATE_EPOCH=1557096633
 mkdir -p clr-build
 pushd clr-build
 export AR=gcc-ar
@@ -64,7 +64,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1557043951
+export SOURCE_DATE_EPOCH=1557096633
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oxygen-icons5
 cp COPYING %{buildroot}/usr/share/package-licenses/oxygen-icons5/COPYING
