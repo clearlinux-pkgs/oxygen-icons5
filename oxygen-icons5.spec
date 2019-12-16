@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : oxygen-icons5
-Version  : 5.64.0
-Release  : 21
-URL      : https://download.kde.org/stable/frameworks/5.64/oxygen-icons5-5.64.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.64/oxygen-icons5-5.64.0.tar.xz
-Source1 : https://download.kde.org/stable/frameworks/5.64/oxygen-icons5-5.64.0.tar.xz.sig
+Version  : 5.65.0
+Release  : 22
+URL      : https://download.kde.org/stable/frameworks/5.65/oxygen-icons5-5.65.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.65/oxygen-icons5-5.65.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.65/oxygen-icons5-5.65.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -42,14 +42,15 @@ license components for the oxygen-icons5 package.
 
 
 %prep
-%setup -q -n oxygen-icons5-5.64.0
+%setup -q -n oxygen-icons5-5.65.0
+cd %{_builddir}/oxygen-icons5-5.65.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1573365055
+export SOURCE_DATE_EPOCH=1576523976
 mkdir -p clr-build
 pushd clr-build
 # -Werror is for werrorists
@@ -66,11 +67,11 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1573365055
+export SOURCE_DATE_EPOCH=1576523976
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oxygen-icons5
-cp %{_builddir}/oxygen-icons5-5.64.0/COPYING %{buildroot}/usr/share/package-licenses/oxygen-icons5/d4ca5d36d06f97622e54feed256d8bff1c07db4d
-cp %{_builddir}/oxygen-icons5-5.64.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/oxygen-icons5/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/oxygen-icons5-5.65.0/COPYING %{buildroot}/usr/share/package-licenses/oxygen-icons5/d4ca5d36d06f97622e54feed256d8bff1c07db4d
+cp %{_builddir}/oxygen-icons5-5.65.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/oxygen-icons5/9a1929f4700d2407c70b507b3b2aaf6226a9543c
 pushd clr-build
 %make_install
 popd
@@ -401,6 +402,7 @@ popd
 /usr/share/icons/oxygen/base/128x128/devices/media-optical-video.png
 /usr/share/icons/oxygen/base/128x128/devices/media-optical.png
 /usr/share/icons/oxygen/base/128x128/devices/media-tape.png
+/usr/share/icons/oxygen/base/128x128/devices/microphone.png
 /usr/share/icons/oxygen/base/128x128/devices/modem.png
 /usr/share/icons/oxygen/base/128x128/devices/multimedia-player-apple-ipod.png
 /usr/share/icons/oxygen/base/128x128/devices/multimedia-player.png
@@ -7412,6 +7414,7 @@ popd
 /usr/share/icons/oxygen/base/48x48/devices/media-optical-video.png
 /usr/share/icons/oxygen/base/48x48/devices/media-optical.png
 /usr/share/icons/oxygen/base/48x48/devices/media-tape.png
+/usr/share/icons/oxygen/base/48x48/devices/microphone.png
 /usr/share/icons/oxygen/base/48x48/devices/modem.png
 /usr/share/icons/oxygen/base/48x48/devices/multimedia-player-apple-ipod.png
 /usr/share/icons/oxygen/base/48x48/devices/multimedia-player.png
@@ -8269,6 +8272,7 @@ popd
 /usr/share/icons/oxygen/base/64x64/devices/media-optical-video.png
 /usr/share/icons/oxygen/base/64x64/devices/media-optical.png
 /usr/share/icons/oxygen/base/64x64/devices/media-tape.png
+/usr/share/icons/oxygen/base/64x64/devices/microphone.png
 /usr/share/icons/oxygen/base/64x64/devices/modem.png
 /usr/share/icons/oxygen/base/64x64/devices/multimedia-player-apple-ipod.png
 /usr/share/icons/oxygen/base/64x64/devices/multimedia-player.png
