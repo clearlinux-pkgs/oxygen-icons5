@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : oxygen-icons5
-Version  : 5.67.0
-Release  : 24
-URL      : https://download.kde.org/stable/frameworks/5.67/oxygen-icons5-5.67.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.67/oxygen-icons5-5.67.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.67/oxygen-icons5-5.67.0.tar.xz.sig
+Version  : 5.68.0
+Release  : 25
+URL      : https://download.kde.org/stable/frameworks/5.68/oxygen-icons5-5.68.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.68/oxygen-icons5-5.68.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.68/oxygen-icons5-5.68.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -42,15 +42,15 @@ license components for the oxygen-icons5 package.
 
 
 %prep
-%setup -q -n oxygen-icons5-5.67.0
-cd %{_builddir}/oxygen-icons5-5.67.0
+%setup -q -n oxygen-icons5-5.68.0
+cd %{_builddir}/oxygen-icons5-5.68.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581283229
+export SOURCE_DATE_EPOCH=1584303429
 mkdir -p clr-build
 pushd clr-build
 # -Werror is for werrorists
@@ -67,11 +67,11 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1581283229
+export SOURCE_DATE_EPOCH=1584303429
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oxygen-icons5
-cp %{_builddir}/oxygen-icons5-5.67.0/COPYING %{buildroot}/usr/share/package-licenses/oxygen-icons5/d4ca5d36d06f97622e54feed256d8bff1c07db4d
-cp %{_builddir}/oxygen-icons5-5.67.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/oxygen-icons5/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/oxygen-icons5-5.68.0/COPYING %{buildroot}/usr/share/package-licenses/oxygen-icons5/d4ca5d36d06f97622e54feed256d8bff1c07db4d
+cp %{_builddir}/oxygen-icons5-5.68.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/oxygen-icons5/9a1929f4700d2407c70b507b3b2aaf6226a9543c
 pushd clr-build
 %make_install
 popd
@@ -858,6 +858,9 @@ popd
 /usr/share/icons/oxygen/base/128x128/places/user-identity.png
 /usr/share/icons/oxygen/base/128x128/places/user-trash-full.png
 /usr/share/icons/oxygen/base/128x128/places/user-trash.png
+/usr/share/icons/oxygen/base/128x128/status/data-error.png
+/usr/share/icons/oxygen/base/128x128/status/data-information.png
+/usr/share/icons/oxygen/base/128x128/status/data-warning.png
 /usr/share/icons/oxygen/base/128x128/status/dialog-error.png
 /usr/share/icons/oxygen/base/128x128/status/dialog-information.png
 /usr/share/icons/oxygen/base/128x128/status/dialog-password.png
@@ -1527,6 +1530,7 @@ popd
 /usr/share/icons/oxygen/base/16x16/actions/player-time.png
 /usr/share/icons/oxygen/base/16x16/actions/player-volume.png
 /usr/share/icons/oxygen/base/16x16/actions/playlist-sort.png
+/usr/share/icons/oxygen/base/16x16/actions/plugins.png
 /usr/share/icons/oxygen/base/16x16/actions/polygon-add-nodes.png
 /usr/share/icons/oxygen/base/16x16/actions/polygon-merge-nodes.png
 /usr/share/icons/oxygen/base/16x16/actions/postalcode.png
@@ -2587,6 +2591,9 @@ popd
 /usr/share/icons/oxygen/base/16x16/status/battery-low.png
 /usr/share/icons/oxygen/base/16x16/status/battery-missing.png
 /usr/share/icons/oxygen/base/16x16/status/cloudstatus.png
+/usr/share/icons/oxygen/base/16x16/status/data-error.png
+/usr/share/icons/oxygen/base/16x16/status/data-information.png
+/usr/share/icons/oxygen/base/16x16/status/data-warning.png
 /usr/share/icons/oxygen/base/16x16/status/dialog-error.png
 /usr/share/icons/oxygen/base/16x16/status/dialog-information.png
 /usr/share/icons/oxygen/base/16x16/status/dialog-password.png
@@ -3300,6 +3307,7 @@ popd
 /usr/share/icons/oxygen/base/22x22/actions/player-volume-muted.png
 /usr/share/icons/oxygen/base/22x22/actions/player-volume.png
 /usr/share/icons/oxygen/base/22x22/actions/playlist-sort.png
+/usr/share/icons/oxygen/base/22x22/actions/plugins.png
 /usr/share/icons/oxygen/base/22x22/actions/polygon-add-nodes.png
 /usr/share/icons/oxygen/base/22x22/actions/polygon-merge-nodes.png
 /usr/share/icons/oxygen/base/22x22/actions/postalcode.png
@@ -4406,6 +4414,9 @@ popd
 /usr/share/icons/oxygen/base/22x22/status/battery-low.png
 /usr/share/icons/oxygen/base/22x22/status/battery-missing.png
 /usr/share/icons/oxygen/base/22x22/status/cloudstatus.png
+/usr/share/icons/oxygen/base/22x22/status/data-error.png
+/usr/share/icons/oxygen/base/22x22/status/data-information.png
+/usr/share/icons/oxygen/base/22x22/status/data-warning.png
 /usr/share/icons/oxygen/base/22x22/status/dialog-error.png
 /usr/share/icons/oxygen/base/22x22/status/dialog-information.png
 /usr/share/icons/oxygen/base/22x22/status/dialog-password.png
@@ -5464,6 +5475,7 @@ popd
 /usr/share/icons/oxygen/base/32x32/actions/page-zoom.png
 /usr/share/icons/oxygen/base/32x32/actions/player-time.png
 /usr/share/icons/oxygen/base/32x32/actions/player-volume.png
+/usr/share/icons/oxygen/base/32x32/actions/plugins.png
 /usr/share/icons/oxygen/base/32x32/actions/preferences-activities.png
 /usr/share/icons/oxygen/base/32x32/actions/preflight-verifier.png
 /usr/share/icons/oxygen/base/32x32/actions/process-stop.png
@@ -6483,6 +6495,9 @@ popd
 /usr/share/icons/oxygen/base/32x32/status/battery-charging.png
 /usr/share/icons/oxygen/base/32x32/status/battery-low.png
 /usr/share/icons/oxygen/base/32x32/status/battery-missing.png
+/usr/share/icons/oxygen/base/32x32/status/data-error.png
+/usr/share/icons/oxygen/base/32x32/status/data-information.png
+/usr/share/icons/oxygen/base/32x32/status/data-warning.png
 /usr/share/icons/oxygen/base/32x32/status/dialog-error.png
 /usr/share/icons/oxygen/base/32x32/status/dialog-information.png
 /usr/share/icons/oxygen/base/32x32/status/dialog-password.png
@@ -6934,6 +6949,7 @@ popd
 /usr/share/icons/oxygen/base/48x48/actions/page-zoom.png
 /usr/share/icons/oxygen/base/48x48/actions/player-time.png
 /usr/share/icons/oxygen/base/48x48/actions/player-volume.png
+/usr/share/icons/oxygen/base/48x48/actions/plugins.png
 /usr/share/icons/oxygen/base/48x48/actions/preferences-activities.png
 /usr/share/icons/oxygen/base/48x48/actions/preflight-verifier.png
 /usr/share/icons/oxygen/base/48x48/actions/process-stop.png
@@ -7899,6 +7915,9 @@ popd
 /usr/share/icons/oxygen/base/48x48/status/battery-charging.png
 /usr/share/icons/oxygen/base/48x48/status/battery-low.png
 /usr/share/icons/oxygen/base/48x48/status/battery-missing.png
+/usr/share/icons/oxygen/base/48x48/status/data-error.png
+/usr/share/icons/oxygen/base/48x48/status/data-information.png
+/usr/share/icons/oxygen/base/48x48/status/data-warning.png
 /usr/share/icons/oxygen/base/48x48/status/dialog-error.png
 /usr/share/icons/oxygen/base/48x48/status/dialog-information.png
 /usr/share/icons/oxygen/base/48x48/status/dialog-password.png
@@ -8735,6 +8754,9 @@ popd
 /usr/share/icons/oxygen/base/64x64/places/user-identity.png
 /usr/share/icons/oxygen/base/64x64/places/user-trash-full.png
 /usr/share/icons/oxygen/base/64x64/places/user-trash.png
+/usr/share/icons/oxygen/base/64x64/status/data-error.png
+/usr/share/icons/oxygen/base/64x64/status/data-information.png
+/usr/share/icons/oxygen/base/64x64/status/data-warning.png
 /usr/share/icons/oxygen/base/64x64/status/dialog-error.png
 /usr/share/icons/oxygen/base/64x64/status/dialog-information.png
 /usr/share/icons/oxygen/base/64x64/status/dialog-password.png
