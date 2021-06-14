@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : oxygen-icons5
-Version  : 5.82.0
-Release  : 37
-URL      : https://download.kde.org/stable/frameworks/5.82/oxygen-icons5-5.82.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.82/oxygen-icons5-5.82.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.82/oxygen-icons5-5.82.0.tar.xz.sig
+Version  : 5.83.0
+Release  : 38
+URL      : https://download.kde.org/stable/frameworks/5.83/oxygen-icons5-5.83.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.83/oxygen-icons5-5.83.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.83/oxygen-icons5-5.83.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -43,15 +43,15 @@ license components for the oxygen-icons5 package.
 
 
 %prep
-%setup -q -n oxygen-icons5-5.82.0
-cd %{_builddir}/oxygen-icons5-5.82.0
+%setup -q -n oxygen-icons5-5.83.0
+cd %{_builddir}/oxygen-icons5-5.83.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1623408222
+export SOURCE_DATE_EPOCH=1623713718
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -67,11 +67,11 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1623408222
+export SOURCE_DATE_EPOCH=1623713718
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oxygen-icons5
-cp %{_builddir}/oxygen-icons5-5.82.0/COPYING %{buildroot}/usr/share/package-licenses/oxygen-icons5/d4ca5d36d06f97622e54feed256d8bff1c07db4d
-cp %{_builddir}/oxygen-icons5-5.82.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/oxygen-icons5/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/oxygen-icons5-5.83.0/COPYING %{buildroot}/usr/share/package-licenses/oxygen-icons5/d4ca5d36d06f97622e54feed256d8bff1c07db4d
+cp %{_builddir}/oxygen-icons5-5.83.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/oxygen-icons5/9a1929f4700d2407c70b507b3b2aaf6226a9543c
 pushd clr-build
 %make_install
 popd
@@ -858,6 +858,9 @@ popd
 /usr/share/icons/oxygen/base/128x128/places/user-identity.png
 /usr/share/icons/oxygen/base/128x128/places/user-trash-full.png
 /usr/share/icons/oxygen/base/128x128/places/user-trash.png
+/usr/share/icons/oxygen/base/128x128/preferences/preferences-desktop-wallpaper.png
+/usr/share/icons/oxygen/base/128x128/preferences/preferences-devices-printer.png
+/usr/share/icons/oxygen/base/128x128/preferences/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/128x128/status/data-error.png
 /usr/share/icons/oxygen/base/128x128/status/data-information.png
 /usr/share/icons/oxygen/base/128x128/status/data-warning.png
@@ -2568,6 +2571,8 @@ popd
 /usr/share/icons/oxygen/base/16x16/places/user-identity.png
 /usr/share/icons/oxygen/base/16x16/places/user-trash-full.png
 /usr/share/icons/oxygen/base/16x16/places/user-trash.png
+/usr/share/icons/oxygen/base/16x16/preferences/preferences-devices-printer.png
+/usr/share/icons/oxygen/base/16x16/preferences/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/16x16/special/file-zoom-in.png
 /usr/share/icons/oxygen/base/16x16/special/file-zoom-out.png
 /usr/share/icons/oxygen/base/16x16/special/image-zoom-in.png
@@ -4391,6 +4396,8 @@ popd
 /usr/share/icons/oxygen/base/22x22/places/user-identity.png
 /usr/share/icons/oxygen/base/22x22/places/user-trash-full.png
 /usr/share/icons/oxygen/base/22x22/places/user-trash.png
+/usr/share/icons/oxygen/base/22x22/preferences/preferences-devices-printer.png
+/usr/share/icons/oxygen/base/22x22/preferences/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/22x22/special/file-zoom-in.png
 /usr/share/icons/oxygen/base/22x22/special/file-zoom-out.png
 /usr/share/icons/oxygen/base/22x22/special/image-zoom-in.png
@@ -4646,6 +4653,7 @@ popd
 /usr/share/icons/oxygen/base/256x256/devices/network-wireless-disconnected.png
 /usr/share/icons/oxygen/base/256x256/devices/network-wireless.png
 /usr/share/icons/oxygen/base/256x256/devices/printer-laser.png
+/usr/share/icons/oxygen/base/256x256/devices/printer.png
 /usr/share/icons/oxygen/base/256x256/devices/secure-card.png
 /usr/share/icons/oxygen/base/256x256/devices/smartphone.png
 /usr/share/icons/oxygen/base/256x256/devices/tablet.png
@@ -5056,6 +5064,8 @@ popd
 /usr/share/icons/oxygen/base/256x256/places/user-home.png
 /usr/share/icons/oxygen/base/256x256/places/user-trash-full.png
 /usr/share/icons/oxygen/base/256x256/places/user-trash.png
+/usr/share/icons/oxygen/base/256x256/preferences/preferences-devices-printer.png
+/usr/share/icons/oxygen/base/256x256/preferences/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/256x256/status/user-trash-full.png
 /usr/share/icons/oxygen/base/32x32/actions/address-book-new.png
 /usr/share/icons/oxygen/base/32x32/actions/adress-book-new.png
@@ -6477,6 +6487,8 @@ popd
 /usr/share/icons/oxygen/base/32x32/places/user-identity.png
 /usr/share/icons/oxygen/base/32x32/places/user-trash-full.png
 /usr/share/icons/oxygen/base/32x32/places/user-trash.png
+/usr/share/icons/oxygen/base/32x32/preferences/preferences-devices-printer.png
+/usr/share/icons/oxygen/base/32x32/preferences/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/32x32/status/appointment-recurring.png
 /usr/share/icons/oxygen/base/32x32/status/appointment-reminder.png
 /usr/share/icons/oxygen/base/32x32/status/audio-volume-high.png
@@ -7827,6 +7839,8 @@ popd
 /usr/share/icons/oxygen/base/48x48/mimetypes/x-office-drawing.png
 /usr/share/icons/oxygen/base/48x48/mimetypes/x-office-presentation.png
 /usr/share/icons/oxygen/base/48x48/mimetypes/x-office-spreadsheet.png
+/usr/share/icons/oxygen/base/48x48/perferences/preferences-devices-printer.png
+/usr/share/icons/oxygen/base/48x48/perferences/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/48x48/places/bookmarks.png
 /usr/share/icons/oxygen/base/48x48/places/certificate-server.png
 /usr/share/icons/oxygen/base/48x48/places/desktop.png
@@ -8755,6 +8769,8 @@ popd
 /usr/share/icons/oxygen/base/64x64/places/user-identity.png
 /usr/share/icons/oxygen/base/64x64/places/user-trash-full.png
 /usr/share/icons/oxygen/base/64x64/places/user-trash.png
+/usr/share/icons/oxygen/base/64x64/preferences/preferences-devices-printer.png
+/usr/share/icons/oxygen/base/64x64/preferences/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/64x64/status/data-error.png
 /usr/share/icons/oxygen/base/64x64/status/data-information.png
 /usr/share/icons/oxygen/base/64x64/status/data-warning.png
