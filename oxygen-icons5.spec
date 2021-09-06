@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : oxygen-icons5
-Version  : 5.83.0
-Release  : 38
-URL      : https://download.kde.org/stable/frameworks/5.83/oxygen-icons5-5.83.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.83/oxygen-icons5-5.83.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.83/oxygen-icons5-5.83.0.tar.xz.sig
+Version  : 5.85.0
+Release  : 39
+URL      : https://download.kde.org/stable/frameworks/5.85/oxygen-icons5-5.85.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.85/oxygen-icons5-5.85.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.85/oxygen-icons5-5.85.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -43,35 +43,35 @@ license components for the oxygen-icons5 package.
 
 
 %prep
-%setup -q -n oxygen-icons5-5.83.0
-cd %{_builddir}/oxygen-icons5-5.83.0
+%setup -q -n oxygen-icons5-5.85.0
+cd %{_builddir}/oxygen-icons5-5.85.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1623713718
+export SOURCE_DATE_EPOCH=1630897821
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 %cmake ..
 make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1623713718
+export SOURCE_DATE_EPOCH=1630897821
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oxygen-icons5
-cp %{_builddir}/oxygen-icons5-5.83.0/COPYING %{buildroot}/usr/share/package-licenses/oxygen-icons5/d4ca5d36d06f97622e54feed256d8bff1c07db4d
-cp %{_builddir}/oxygen-icons5-5.83.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/oxygen-icons5/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/oxygen-icons5-5.85.0/COPYING %{buildroot}/usr/share/package-licenses/oxygen-icons5/d4ca5d36d06f97622e54feed256d8bff1c07db4d
+cp %{_builddir}/oxygen-icons5-5.85.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/oxygen-icons5/9a1929f4700d2407c70b507b3b2aaf6226a9543c
 pushd clr-build
 %make_install
 popd
@@ -291,12 +291,15 @@ popd
 /usr/share/icons/oxygen/base/128x128/apps/preferences-desktop-keyboard.png
 /usr/share/icons/oxygen/base/128x128/apps/preferences-desktop-locale.png
 /usr/share/icons/oxygen/base/128x128/apps/preferences-desktop-mouse.png
+/usr/share/icons/oxygen/base/128x128/apps/preferences-desktop-notification-bell.png
 /usr/share/icons/oxygen/base/128x128/apps/preferences-desktop-notification.png
 /usr/share/icons/oxygen/base/128x128/apps/preferences-desktop-printer.png
 /usr/share/icons/oxygen/base/128x128/apps/preferences-desktop-screensaver.png
+/usr/share/icons/oxygen/base/128x128/apps/preferences-desktop-search.png
 /usr/share/icons/oxygen/base/128x128/apps/preferences-desktop-sound.png
 /usr/share/icons/oxygen/base/128x128/apps/preferences-desktop-text-to-speech.png
 /usr/share/icons/oxygen/base/128x128/apps/preferences-desktop-theme.png
+/usr/share/icons/oxygen/base/128x128/apps/preferences-desktop-thunderbolt.png
 /usr/share/icons/oxygen/base/128x128/apps/preferences-desktop-user-password.png
 /usr/share/icons/oxygen/base/128x128/apps/preferences-desktop-user.png
 /usr/share/icons/oxygen/base/128x128/apps/preferences-desktop-wallpaper.png
@@ -305,6 +308,7 @@ popd
 /usr/share/icons/oxygen/base/128x128/apps/preferences-system-bluetooth-inactive.png
 /usr/share/icons/oxygen/base/128x128/apps/preferences-system-bluetooth.png
 /usr/share/icons/oxygen/base/128x128/apps/preferences-system-login.png
+/usr/share/icons/oxygen/base/128x128/apps/preferences-system-network-ethernet.png
 /usr/share/icons/oxygen/base/128x128/apps/preferences-system-network-sharing.png
 /usr/share/icons/oxygen/base/128x128/apps/preferences-system-power-management.png
 /usr/share/icons/oxygen/base/128x128/apps/preferences-system-time.png
@@ -338,6 +342,7 @@ popd
 /usr/share/icons/oxygen/base/128x128/apps/yakuake.png
 /usr/share/icons/oxygen/base/128x128/apps/zanshin.png
 /usr/share/icons/oxygen/base/128x128/categories/applications-accessories.png
+/usr/share/icons/oxygen/base/128x128/categories/applications-all.png
 /usr/share/icons/oxygen/base/128x128/categories/applications-development-translation.png
 /usr/share/icons/oxygen/base/128x128/categories/applications-development-web.png
 /usr/share/icons/oxygen/base/128x128/categories/applications-development.png
@@ -362,11 +367,16 @@ popd
 /usr/share/icons/oxygen/base/128x128/categories/applications-utilities.png
 /usr/share/icons/oxygen/base/128x128/categories/preferences-desktop-peripherals.png
 /usr/share/icons/oxygen/base/128x128/categories/preferences-desktop-personal.png
+/usr/share/icons/oxygen/base/128x128/categories/preferences-desktop-wallpaper.png
 /usr/share/icons/oxygen/base/128x128/categories/preferences-desktop.png
+/usr/share/icons/oxygen/base/128x128/categories/preferences-devices-printer.png
+/usr/share/icons/oxygen/base/128x128/categories/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/128x128/categories/preferences-other.png
 /usr/share/icons/oxygen/base/128x128/categories/preferences-system-network.png
+/usr/share/icons/oxygen/base/128x128/categories/preferences-system-users.png
 /usr/share/icons/oxygen/base/128x128/categories/preferences-system.png
 /usr/share/icons/oxygen/base/128x128/categories/system-help.png
+/usr/share/icons/oxygen/base/128x128/categories/system-users.png
 /usr/share/icons/oxygen/base/128x128/devices/audio-card.png
 /usr/share/icons/oxygen/base/128x128/devices/audio-headphones.png
 /usr/share/icons/oxygen/base/128x128/devices/audio-headset.png
@@ -858,9 +868,6 @@ popd
 /usr/share/icons/oxygen/base/128x128/places/user-identity.png
 /usr/share/icons/oxygen/base/128x128/places/user-trash-full.png
 /usr/share/icons/oxygen/base/128x128/places/user-trash.png
-/usr/share/icons/oxygen/base/128x128/preferences/preferences-desktop-wallpaper.png
-/usr/share/icons/oxygen/base/128x128/preferences/preferences-devices-printer.png
-/usr/share/icons/oxygen/base/128x128/preferences/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/128x128/status/data-error.png
 /usr/share/icons/oxygen/base/128x128/status/data-information.png
 /usr/share/icons/oxygen/base/128x128/status/data-warning.png
@@ -2009,6 +2016,7 @@ popd
 /usr/share/icons/oxygen/base/16x16/apps/xorg.png
 /usr/share/icons/oxygen/base/16x16/apps/yakuake.png
 /usr/share/icons/oxygen/base/16x16/categories/applications-accessories.png
+/usr/share/icons/oxygen/base/16x16/categories/applications-all.png
 /usr/share/icons/oxygen/base/16x16/categories/applications-development-translation.png
 /usr/share/icons/oxygen/base/16x16/categories/applications-development-web.png
 /usr/share/icons/oxygen/base/16x16/categories/applications-development.png
@@ -2034,6 +2042,8 @@ popd
 /usr/share/icons/oxygen/base/16x16/categories/preferences-desktop-peripherals.png
 /usr/share/icons/oxygen/base/16x16/categories/preferences-desktop-personal.png
 /usr/share/icons/oxygen/base/16x16/categories/preferences-desktop.png
+/usr/share/icons/oxygen/base/16x16/categories/preferences-devices-printer.png
+/usr/share/icons/oxygen/base/16x16/categories/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/16x16/categories/preferences-other.png
 /usr/share/icons/oxygen/base/16x16/categories/preferences-system-network.png
 /usr/share/icons/oxygen/base/16x16/categories/preferences-system.png
@@ -2571,8 +2581,6 @@ popd
 /usr/share/icons/oxygen/base/16x16/places/user-identity.png
 /usr/share/icons/oxygen/base/16x16/places/user-trash-full.png
 /usr/share/icons/oxygen/base/16x16/places/user-trash.png
-/usr/share/icons/oxygen/base/16x16/preferences/preferences-devices-printer.png
-/usr/share/icons/oxygen/base/16x16/preferences/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/16x16/special/file-zoom-in.png
 /usr/share/icons/oxygen/base/16x16/special/file-zoom-out.png
 /usr/share/icons/oxygen/base/16x16/special/image-zoom-in.png
@@ -3810,6 +3818,8 @@ popd
 /usr/share/icons/oxygen/base/22x22/categories/preferences-desktop-peripherals.png
 /usr/share/icons/oxygen/base/22x22/categories/preferences-desktop-personal.png
 /usr/share/icons/oxygen/base/22x22/categories/preferences-desktop.png
+/usr/share/icons/oxygen/base/22x22/categories/preferences-devices-printer.png
+/usr/share/icons/oxygen/base/22x22/categories/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/22x22/categories/preferences-other.png
 /usr/share/icons/oxygen/base/22x22/categories/preferences-system-network.png
 /usr/share/icons/oxygen/base/22x22/categories/preferences-system.png
@@ -4396,8 +4406,6 @@ popd
 /usr/share/icons/oxygen/base/22x22/places/user-identity.png
 /usr/share/icons/oxygen/base/22x22/places/user-trash-full.png
 /usr/share/icons/oxygen/base/22x22/places/user-trash.png
-/usr/share/icons/oxygen/base/22x22/preferences/preferences-devices-printer.png
-/usr/share/icons/oxygen/base/22x22/preferences/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/22x22/special/file-zoom-in.png
 /usr/share/icons/oxygen/base/22x22/special/file-zoom-out.png
 /usr/share/icons/oxygen/base/22x22/special/image-zoom-in.png
@@ -4592,10 +4600,16 @@ popd
 /usr/share/icons/oxygen/base/256x256/apps/partitionmanager.png
 /usr/share/icons/oxygen/base/256x256/apps/picmi.png
 /usr/share/icons/oxygen/base/256x256/apps/planner.png
+/usr/share/icons/oxygen/base/256x256/apps/preferences-desktop-display-color.png
+/usr/share/icons/oxygen/base/256x256/apps/preferences-desktop-display.png
 /usr/share/icons/oxygen/base/256x256/apps/preferences-desktop-locale.png
+/usr/share/icons/oxygen/base/256x256/apps/preferences-desktop-notification-bell.png
 /usr/share/icons/oxygen/base/256x256/apps/preferences-desktop-screensaver.png
+/usr/share/icons/oxygen/base/256x256/apps/preferences-desktop-search.png
+/usr/share/icons/oxygen/base/256x256/apps/preferences-desktop-thunderbolt.png
 /usr/share/icons/oxygen/base/256x256/apps/preferences-system-bluetooth-inactive.png
 /usr/share/icons/oxygen/base/256x256/apps/preferences-system-bluetooth.png
+/usr/share/icons/oxygen/base/256x256/apps/preferences-system-login.png
 /usr/share/icons/oxygen/base/256x256/apps/qelectrotech.png
 /usr/share/icons/oxygen/base/256x256/apps/quassel.png
 /usr/share/icons/oxygen/base/256x256/apps/showfoto.png
@@ -4605,6 +4619,7 @@ popd
 /usr/share/icons/oxygen/base/256x256/apps/timevault.png
 /usr/share/icons/oxygen/base/256x256/apps/yakuake.png
 /usr/share/icons/oxygen/base/256x256/apps/zanshin.png
+/usr/share/icons/oxygen/base/256x256/categories/applications-all.png
 /usr/share/icons/oxygen/base/256x256/categories/applications-engineering.png
 /usr/share/icons/oxygen/base/256x256/categories/applications-graphics.png
 /usr/share/icons/oxygen/base/256x256/categories/applications-internet.png
@@ -4614,9 +4629,14 @@ popd
 /usr/share/icons/oxygen/base/256x256/categories/applications-science.png
 /usr/share/icons/oxygen/base/256x256/categories/applications-system.png
 /usr/share/icons/oxygen/base/256x256/categories/preferences-desktop.png
+/usr/share/icons/oxygen/base/256x256/categories/preferences-devices-printer.png
+/usr/share/icons/oxygen/base/256x256/categories/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/256x256/categories/preferences-other.png
+/usr/share/icons/oxygen/base/256x256/categories/preferences-system-network-ethernet.png
 /usr/share/icons/oxygen/base/256x256/categories/preferences-system-network.png
+/usr/share/icons/oxygen/base/256x256/categories/preferences-system-users.png
 /usr/share/icons/oxygen/base/256x256/categories/preferences-system.png
+/usr/share/icons/oxygen/base/256x256/categories/system-users.png
 /usr/share/icons/oxygen/base/256x256/devices/audio-card.png
 /usr/share/icons/oxygen/base/256x256/devices/audio-headphones.png
 /usr/share/icons/oxygen/base/256x256/devices/camera-photo.png
@@ -5064,8 +5084,6 @@ popd
 /usr/share/icons/oxygen/base/256x256/places/user-home.png
 /usr/share/icons/oxygen/base/256x256/places/user-trash-full.png
 /usr/share/icons/oxygen/base/256x256/places/user-trash.png
-/usr/share/icons/oxygen/base/256x256/preferences/preferences-devices-printer.png
-/usr/share/icons/oxygen/base/256x256/preferences/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/256x256/status/user-trash-full.png
 /usr/share/icons/oxygen/base/32x32/actions/address-book-new.png
 /usr/share/icons/oxygen/base/32x32/actions/adress-book-new.png
@@ -5866,9 +5884,11 @@ popd
 /usr/share/icons/oxygen/base/32x32/apps/preferences-desktop-notification.png
 /usr/share/icons/oxygen/base/32x32/apps/preferences-desktop-printer.png
 /usr/share/icons/oxygen/base/32x32/apps/preferences-desktop-screensaver.png
+/usr/share/icons/oxygen/base/32x32/apps/preferences-desktop-search.png
 /usr/share/icons/oxygen/base/32x32/apps/preferences-desktop-sound.png
 /usr/share/icons/oxygen/base/32x32/apps/preferences-desktop-text-to-speech.png
 /usr/share/icons/oxygen/base/32x32/apps/preferences-desktop-theme.png
+/usr/share/icons/oxygen/base/32x32/apps/preferences-desktop-thunderbolt.png
 /usr/share/icons/oxygen/base/32x32/apps/preferences-desktop-user-password.png
 /usr/share/icons/oxygen/base/32x32/apps/preferences-desktop-user.png
 /usr/share/icons/oxygen/base/32x32/apps/preferences-desktop-wallpaper.png
@@ -5916,6 +5936,7 @@ popd
 /usr/share/icons/oxygen/base/32x32/apps/xorg.png
 /usr/share/icons/oxygen/base/32x32/apps/yakuake.png
 /usr/share/icons/oxygen/base/32x32/categories/applications-accessories.png
+/usr/share/icons/oxygen/base/32x32/categories/applications-all.png
 /usr/share/icons/oxygen/base/32x32/categories/applications-development-translation.png
 /usr/share/icons/oxygen/base/32x32/categories/applications-development-web.png
 /usr/share/icons/oxygen/base/32x32/categories/applications-development.png
@@ -5940,11 +5961,17 @@ popd
 /usr/share/icons/oxygen/base/32x32/categories/applications-utilities.png
 /usr/share/icons/oxygen/base/32x32/categories/preferences-desktop-peripherals.png
 /usr/share/icons/oxygen/base/32x32/categories/preferences-desktop-personal.png
+/usr/share/icons/oxygen/base/32x32/categories/preferences-desktop-thunderbolt.png
 /usr/share/icons/oxygen/base/32x32/categories/preferences-desktop.png
+/usr/share/icons/oxygen/base/32x32/categories/preferences-devices-printer.png
+/usr/share/icons/oxygen/base/32x32/categories/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/32x32/categories/preferences-other.png
+/usr/share/icons/oxygen/base/32x32/categories/preferences-system-network-ethernet.png
 /usr/share/icons/oxygen/base/32x32/categories/preferences-system-network.png
+/usr/share/icons/oxygen/base/32x32/categories/preferences-system-users.png
 /usr/share/icons/oxygen/base/32x32/categories/preferences-system.png
 /usr/share/icons/oxygen/base/32x32/categories/system-help.png
+/usr/share/icons/oxygen/base/32x32/categories/system-users.png
 /usr/share/icons/oxygen/base/32x32/devices/audio-card.png
 /usr/share/icons/oxygen/base/32x32/devices/audio-headphones.png
 /usr/share/icons/oxygen/base/32x32/devices/audio-headset.png
@@ -6487,8 +6514,6 @@ popd
 /usr/share/icons/oxygen/base/32x32/places/user-identity.png
 /usr/share/icons/oxygen/base/32x32/places/user-trash-full.png
 /usr/share/icons/oxygen/base/32x32/places/user-trash.png
-/usr/share/icons/oxygen/base/32x32/preferences/preferences-devices-printer.png
-/usr/share/icons/oxygen/base/32x32/preferences/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/32x32/status/appointment-recurring.png
 /usr/share/icons/oxygen/base/32x32/status/appointment-reminder.png
 /usr/share/icons/oxygen/base/32x32/status/audio-volume-high.png
@@ -7379,6 +7404,7 @@ popd
 /usr/share/icons/oxygen/base/48x48/apps/yakuake.png
 /usr/share/icons/oxygen/base/48x48/apps/zanshin.png
 /usr/share/icons/oxygen/base/48x48/categories/applications-accessories.png
+/usr/share/icons/oxygen/base/48x48/categories/applications-all.png
 /usr/share/icons/oxygen/base/48x48/categories/applications-development-translation.png
 /usr/share/icons/oxygen/base/48x48/categories/applications-development-web.png
 /usr/share/icons/oxygen/base/48x48/categories/applications-development.png
@@ -7404,6 +7430,8 @@ popd
 /usr/share/icons/oxygen/base/48x48/categories/preferences-desktop-peripherals.png
 /usr/share/icons/oxygen/base/48x48/categories/preferences-desktop-personal.png
 /usr/share/icons/oxygen/base/48x48/categories/preferences-desktop.png
+/usr/share/icons/oxygen/base/48x48/categories/preferences-devices-printer.png
+/usr/share/icons/oxygen/base/48x48/categories/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/48x48/categories/preferences-other.png
 /usr/share/icons/oxygen/base/48x48/categories/preferences-system-network.png
 /usr/share/icons/oxygen/base/48x48/categories/preferences-system.png
@@ -7839,8 +7867,6 @@ popd
 /usr/share/icons/oxygen/base/48x48/mimetypes/x-office-drawing.png
 /usr/share/icons/oxygen/base/48x48/mimetypes/x-office-presentation.png
 /usr/share/icons/oxygen/base/48x48/mimetypes/x-office-spreadsheet.png
-/usr/share/icons/oxygen/base/48x48/perferences/preferences-devices-printer.png
-/usr/share/icons/oxygen/base/48x48/perferences/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/48x48/places/bookmarks.png
 /usr/share/icons/oxygen/base/48x48/places/certificate-server.png
 /usr/share/icons/oxygen/base/48x48/places/desktop.png
@@ -8197,6 +8223,7 @@ popd
 /usr/share/icons/oxygen/base/64x64/apps/preferences-desktop-keyboard.png
 /usr/share/icons/oxygen/base/64x64/apps/preferences-desktop-locale.png
 /usr/share/icons/oxygen/base/64x64/apps/preferences-desktop-mouse.png
+/usr/share/icons/oxygen/base/64x64/apps/preferences-desktop-notification-bell.png
 /usr/share/icons/oxygen/base/64x64/apps/preferences-desktop-notification.png
 /usr/share/icons/oxygen/base/64x64/apps/preferences-desktop-printer.png
 /usr/share/icons/oxygen/base/64x64/apps/preferences-desktop-screensaver.png
@@ -8242,6 +8269,7 @@ popd
 /usr/share/icons/oxygen/base/64x64/apps/yakuake.png
 /usr/share/icons/oxygen/base/64x64/apps/zanshin.png
 /usr/share/icons/oxygen/base/64x64/categories/applications-accessories.png
+/usr/share/icons/oxygen/base/64x64/categories/applications-all.png
 /usr/share/icons/oxygen/base/64x64/categories/applications-development-translation.png
 /usr/share/icons/oxygen/base/64x64/categories/applications-development-web.png
 /usr/share/icons/oxygen/base/64x64/categories/applications-development.png
@@ -8267,6 +8295,8 @@ popd
 /usr/share/icons/oxygen/base/64x64/categories/preferences-desktop-peripherals.png
 /usr/share/icons/oxygen/base/64x64/categories/preferences-desktop-personal.png
 /usr/share/icons/oxygen/base/64x64/categories/preferences-desktop.png
+/usr/share/icons/oxygen/base/64x64/categories/preferences-devices-printer.png
+/usr/share/icons/oxygen/base/64x64/categories/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/64x64/categories/preferences-other.png
 /usr/share/icons/oxygen/base/64x64/categories/preferences-system-network.png
 /usr/share/icons/oxygen/base/64x64/categories/preferences-system.png
@@ -8769,8 +8799,6 @@ popd
 /usr/share/icons/oxygen/base/64x64/places/user-identity.png
 /usr/share/icons/oxygen/base/64x64/places/user-trash-full.png
 /usr/share/icons/oxygen/base/64x64/places/user-trash.png
-/usr/share/icons/oxygen/base/64x64/preferences/preferences-devices-printer.png
-/usr/share/icons/oxygen/base/64x64/preferences/preferences-kde-connect.png
 /usr/share/icons/oxygen/base/64x64/status/data-error.png
 /usr/share/icons/oxygen/base/64x64/status/data-information.png
 /usr/share/icons/oxygen/base/64x64/status/data-warning.png
