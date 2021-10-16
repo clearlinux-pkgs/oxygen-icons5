@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : oxygen-icons5
-Version  : 5.85.0
-Release  : 39
-URL      : https://download.kde.org/stable/frameworks/5.85/oxygen-icons5-5.85.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.85/oxygen-icons5-5.85.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.85/oxygen-icons5-5.85.0.tar.xz.sig
+Version  : 5.87.0
+Release  : 40
+URL      : https://download.kde.org/stable/frameworks/5.87/oxygen-icons5-5.87.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.87/oxygen-icons5-5.87.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.87/oxygen-icons5-5.87.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -43,15 +43,15 @@ license components for the oxygen-icons5 package.
 
 
 %prep
-%setup -q -n oxygen-icons5-5.85.0
-cd %{_builddir}/oxygen-icons5-5.85.0
+%setup -q -n oxygen-icons5-5.87.0
+cd %{_builddir}/oxygen-icons5-5.87.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1630897821
+export SOURCE_DATE_EPOCH=1634401092
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -67,11 +67,11 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1630897821
+export SOURCE_DATE_EPOCH=1634401092
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oxygen-icons5
-cp %{_builddir}/oxygen-icons5-5.85.0/COPYING %{buildroot}/usr/share/package-licenses/oxygen-icons5/d4ca5d36d06f97622e54feed256d8bff1c07db4d
-cp %{_builddir}/oxygen-icons5-5.85.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/oxygen-icons5/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/oxygen-icons5-5.87.0/COPYING %{buildroot}/usr/share/package-licenses/oxygen-icons5/d4ca5d36d06f97622e54feed256d8bff1c07db4d
+cp %{_builddir}/oxygen-icons5-5.87.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/oxygen-icons5/9a1929f4700d2407c70b507b3b2aaf6226a9543c
 pushd clr-build
 %make_install
 popd
@@ -1473,6 +1473,8 @@ popd
 /usr/share/icons/oxygen/base/16x16/actions/milestone.png
 /usr/share/icons/oxygen/base/16x16/actions/network-connect.png
 /usr/share/icons/oxygen/base/16x16/actions/network-disconnect.png
+/usr/share/icons/oxygen/base/16x16/actions/new-audio-alarm.png
+/usr/share/icons/oxygen/base/16x16/actions/new-command-alarm.png
 /usr/share/icons/oxygen/base/16x16/actions/news-subscribe.png
 /usr/share/icons/oxygen/base/16x16/actions/news-unsubscribe.png
 /usr/share/icons/oxygen/base/16x16/actions/node-add.png
@@ -3123,6 +3125,8 @@ popd
 /usr/share/icons/oxygen/base/22x22/actions/irc-remove-operator.png
 /usr/share/icons/oxygen/base/22x22/actions/irc-unvoice.png
 /usr/share/icons/oxygen/base/22x22/actions/irc-voice.png
+/usr/share/icons/oxygen/base/22x22/actions/kalarm-disabled.png
+/usr/share/icons/oxygen/base/22x22/actions/kalarm-partdisabled.png
 /usr/share/icons/oxygen/base/22x22/actions/kdenlive-add-slide-clip.png
 /usr/share/icons/oxygen/base/22x22/actions/kdenlive-align-bottom.png
 /usr/share/icons/oxygen/base/22x22/actions/kdenlive-align-hor.png
@@ -3266,6 +3270,8 @@ popd
 /usr/share/icons/oxygen/base/22x22/actions/mixer-video.png
 /usr/share/icons/oxygen/base/22x22/actions/network-connect.png
 /usr/share/icons/oxygen/base/22x22/actions/network-disconnect.png
+/usr/share/icons/oxygen/base/22x22/actions/new-audio-alarm.png
+/usr/share/icons/oxygen/base/22x22/actions/new-command-alarm.png
 /usr/share/icons/oxygen/base/22x22/actions/news-subscribe.png
 /usr/share/icons/oxygen/base/22x22/actions/news-unsubscribe.png
 /usr/share/icons/oxygen/base/22x22/actions/node-add.png
