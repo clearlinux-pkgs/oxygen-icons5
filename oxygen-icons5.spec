@@ -6,7 +6,7 @@
 #
 Name     : oxygen-icons5
 Version  : 5.87.0
-Release  : 40
+Release  : 41
 URL      : https://download.kde.org/stable/frameworks/5.87/oxygen-icons5-5.87.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.87/oxygen-icons5-5.87.0.tar.xz
 Source1  : https://download.kde.org/stable/frameworks/5.87/oxygen-icons5-5.87.0.tar.xz.sig
