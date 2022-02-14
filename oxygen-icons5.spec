@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : oxygen-icons5
-Version  : 5.90.0
-Release  : 44
-URL      : https://download.kde.org/stable/frameworks/5.90/oxygen-icons5-5.90.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.90/oxygen-icons5-5.90.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.90/oxygen-icons5-5.90.0.tar.xz.sig
+Version  : 5.91.0
+Release  : 45
+URL      : https://download.kde.org/stable/frameworks/5.91/oxygen-icons5-5.91.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.91/oxygen-icons5-5.91.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.91/oxygen-icons5-5.91.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -42,15 +42,15 @@ license components for the oxygen-icons5 package.
 
 
 %prep
-%setup -q -n oxygen-icons5-5.90.0
-cd %{_builddir}/oxygen-icons5-5.90.0
+%setup -q -n oxygen-icons5-5.91.0
+cd %{_builddir}/oxygen-icons5-5.91.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641962051
+export SOURCE_DATE_EPOCH=1644797761
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -66,11 +66,11 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1641962051
+export SOURCE_DATE_EPOCH=1644797761
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oxygen-icons5
-cp %{_builddir}/oxygen-icons5-5.90.0/COPYING %{buildroot}/usr/share/package-licenses/oxygen-icons5/d4ca5d36d06f97622e54feed256d8bff1c07db4d
-cp %{_builddir}/oxygen-icons5-5.90.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/oxygen-icons5/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/oxygen-icons5-5.91.0/COPYING %{buildroot}/usr/share/package-licenses/oxygen-icons5/d4ca5d36d06f97622e54feed256d8bff1c07db4d
+cp %{_builddir}/oxygen-icons5-5.91.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/oxygen-icons5/9a1929f4700d2407c70b507b3b2aaf6226a9543c
 pushd clr-build
 %make_install
 popd
@@ -643,6 +643,8 @@ popd
 /usr/share/icons/oxygen/base/128x128/mimetypes/audio-x-speex+ogg.png
 /usr/share/icons/oxygen/base/128x128/mimetypes/audio-x-wav.png
 /usr/share/icons/oxygen/base/128x128/mimetypes/encrypted.png
+/usr/share/icons/oxygen/base/128x128/mimetypes/font-otf.png
+/usr/share/icons/oxygen/base/128x128/mimetypes/font-ttf.png
 /usr/share/icons/oxygen/base/128x128/mimetypes/fonts-package.png
 /usr/share/icons/oxygen/base/128x128/mimetypes/image-bmp.png
 /usr/share/icons/oxygen/base/128x128/mimetypes/image-gif.png
@@ -2346,6 +2348,8 @@ popd
 /usr/share/icons/oxygen/base/16x16/mimetypes/audio-x-speex+ogg.png
 /usr/share/icons/oxygen/base/16x16/mimetypes/audio-x-wav.png
 /usr/share/icons/oxygen/base/16x16/mimetypes/encrypted.png
+/usr/share/icons/oxygen/base/16x16/mimetypes/font-otf.png
+/usr/share/icons/oxygen/base/16x16/mimetypes/font-ttf.png
 /usr/share/icons/oxygen/base/16x16/mimetypes/fonts-package.png
 /usr/share/icons/oxygen/base/16x16/mimetypes/image-bmp.png
 /usr/share/icons/oxygen/base/16x16/mimetypes/image-gif.png
@@ -4175,6 +4179,8 @@ popd
 /usr/share/icons/oxygen/base/22x22/mimetypes/audio-x-speex+ogg.png
 /usr/share/icons/oxygen/base/22x22/mimetypes/audio-x-wav.png
 /usr/share/icons/oxygen/base/22x22/mimetypes/encrypted.png
+/usr/share/icons/oxygen/base/22x22/mimetypes/font-otf.png
+/usr/share/icons/oxygen/base/22x22/mimetypes/font-ttf.png
 /usr/share/icons/oxygen/base/22x22/mimetypes/fonts-package.png
 /usr/share/icons/oxygen/base/22x22/mimetypes/image-bmp.png
 /usr/share/icons/oxygen/base/22x22/mimetypes/image-gif.png
@@ -4739,6 +4745,7 @@ popd
 /usr/share/icons/oxygen/base/256x256/mimetypes/application-vnd.sun.xml.writer.global.png
 /usr/share/icons/oxygen/base/256x256/mimetypes/application-vnd.sun.xml.writer.png.png
 /usr/share/icons/oxygen/base/256x256/mimetypes/application-vnd.wordperfect.png
+/usr/share/icons/oxygen/base/256x256/mimetypes/application-wps-office.xls.png
 /usr/share/icons/oxygen/base/256x256/mimetypes/application-x-7z-compressed.png
 /usr/share/icons/oxygen/base/256x256/mimetypes/application-x-abiword.png
 /usr/share/icons/oxygen/base/256x256/mimetypes/application-x-ace.png
@@ -4872,6 +4879,8 @@ popd
 /usr/share/icons/oxygen/base/256x256/mimetypes/audio-x-speex+ogg.png
 /usr/share/icons/oxygen/base/256x256/mimetypes/audio-x-wav.png
 /usr/share/icons/oxygen/base/256x256/mimetypes/encrypted.png
+/usr/share/icons/oxygen/base/256x256/mimetypes/font-otf.png
+/usr/share/icons/oxygen/base/256x256/mimetypes/font-ttf.png
 /usr/share/icons/oxygen/base/256x256/mimetypes/fonts-package.png
 /usr/share/icons/oxygen/base/256x256/mimetypes/image-bmp.png
 /usr/share/icons/oxygen/base/256x256/mimetypes/image-gif.png
@@ -6282,6 +6291,8 @@ popd
 /usr/share/icons/oxygen/base/32x32/mimetypes/audio-x-speex+ogg.png
 /usr/share/icons/oxygen/base/32x32/mimetypes/audio-x-wav.png
 /usr/share/icons/oxygen/base/32x32/mimetypes/encrypted.png
+/usr/share/icons/oxygen/base/32x32/mimetypes/font-otf.png
+/usr/share/icons/oxygen/base/32x32/mimetypes/font-ttf.png
 /usr/share/icons/oxygen/base/32x32/mimetypes/fonts-package.png
 /usr/share/icons/oxygen/base/32x32/mimetypes/image-bmp.png
 /usr/share/icons/oxygen/base/32x32/mimetypes/image-gif.png
@@ -7714,6 +7725,8 @@ popd
 /usr/share/icons/oxygen/base/48x48/mimetypes/audio-x-speex+ogg.png
 /usr/share/icons/oxygen/base/48x48/mimetypes/audio-x-wav.png
 /usr/share/icons/oxygen/base/48x48/mimetypes/encrypted.png
+/usr/share/icons/oxygen/base/48x48/mimetypes/font-otf.png
+/usr/share/icons/oxygen/base/48x48/mimetypes/font-ttf.png
 /usr/share/icons/oxygen/base/48x48/mimetypes/fonts-package.png
 /usr/share/icons/oxygen/base/48x48/mimetypes/image-bmp.png
 /usr/share/icons/oxygen/base/48x48/mimetypes/image-gif.png
@@ -8574,6 +8587,8 @@ popd
 /usr/share/icons/oxygen/base/64x64/mimetypes/audio-x-speex+ogg.png
 /usr/share/icons/oxygen/base/64x64/mimetypes/audio-x-wav.png
 /usr/share/icons/oxygen/base/64x64/mimetypes/encrypted.png
+/usr/share/icons/oxygen/base/64x64/mimetypes/font-otf.png
+/usr/share/icons/oxygen/base/64x64/mimetypes/font-ttf.png
 /usr/share/icons/oxygen/base/64x64/mimetypes/fonts-package.png
 /usr/share/icons/oxygen/base/64x64/mimetypes/image-bmp.png
 /usr/share/icons/oxygen/base/64x64/mimetypes/image-gif.png
